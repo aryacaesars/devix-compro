@@ -78,7 +78,7 @@ const Navbar = () => {
               <div className="flex items-center">
                 {/* Logo untuk light mode */}
                 <Image
-                  src="/frontend/logo/Logo-Primary.png"
+                  src="/frontend/logo/Logo-Primary.svg"
                   alt="DEVIX Logo"
                   width={100}
                   height={50}
@@ -86,7 +86,7 @@ const Navbar = () => {
                 />
                 {/* Logo untuk dark mode */}
                 <Image
-                  src="/frontend/logo/Logo-Secondary.png"
+                  src="/frontend/logo/Logo-Secondary.svg"
                   alt="DEVIX Logo"
                   width={100}
                   height={50}

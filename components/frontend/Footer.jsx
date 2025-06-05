@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center">
               <Image
-                src="/frontend/logo/Logo-Secondary.png"
+                src="/frontend/logo/Logo-Secondary.svg"
                 alt="DEVIX Logo"
                 width={150}
                 height={100}

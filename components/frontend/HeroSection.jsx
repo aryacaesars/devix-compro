@@ -3,8 +3,30 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Check for dark mode
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    };
+
+    // Initial check
+    checkDarkMode();
+
+    // Listen for changes
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   // Smooth scrolling
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
@@ -23,13 +45,14 @@ const HeroSection = () => {
       title: "Bangun Website Impian Anda dengan Desain Profesional",
       description:
         "Maksimalkan bisnis Anda dengan website modern, optimalkan untuk setiap perangkat",
-      image: "/frontend/hero/hero.svg",
+      image: "/frontend/hero/hero.png",
+      imageDark: "/frontend/hero/hero-dark.png",
       alt: "Professional with laptop",
     },
   ];
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between mt-16 px-4 py-12 bg-gradient-to-r from-[#1e3987] to-[#1E609A] dark:from-gray-900 dark:to-gray-700 transition-colors duration-300 overflow-x-hidden">
+    <section className="flex flex-col md:flex-row items-center justify-between mt-16 px-4 py-12 bg-white dark:bg-gray-900 transition-colors duration-300 overflow-x-hidden">
       <div className="w-full max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div className="py-12 md:py-20 flex flex-col md:flex-row items-center justify-between">
           {heroContent.map((content) => (
@@ -44,10 +67,10 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="w-full md:w-3/5 space-y-6"
               >
-                <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white dark:text-white">
+                <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1e3987] dark:text-blue-300">
                   {content.title}
                 </h1>
-                <p className="text-lg xs:text-xl md:text-2xl text-gray-200 dark:text-gray-300 max-w-2xl">
+                <p className="text-lg xs:text-xl md:text-2xl text-gray-700 dark:text-gray-200 max-w-2xl">
                   {content.description}
                 </p>
                 <motion.div
@@ -60,7 +83,7 @@ const HeroSection = () => {
                     href="#package"
                     onClick={(e) => handleSmoothScroll(e, "package")}
                   >
-                    <button className="w-full sm:w-auto bg-white text-[#1e3987] dark:text-gray-950 px-8 py-3 rounded-xl font-medium hover:bg-opacity-85 transition-colors">
+                    <button className="w-full sm:w-auto bg-[#1e3987] text-white dark:bg-white dark:text-blue-500 px-8 py-3 rounded-xl font-medium hover:bg-opacity-85 dark:hover:bg-blue-500 dark:hover:text-white transition-colors">
                       Lihat Paket
                     </button>
                   </Link>
@@ -68,7 +91,7 @@ const HeroSection = () => {
                     href="#projects"
                     onClick={(e) => handleSmoothScroll(e, "projects")}
                   >
-                    <button className="w-full sm:w-auto border-2 border-white text-white dark:text-white px-8 py-3 rounded-xl font-medium hover:bg-white/10 dark:hover:bg-gray-700 transition-colors">
+                    <button className="w-full sm:w-auto border-2 border-[#1e3987] text-[#1e3987] dark:border-blue-300 dark:text-blue-300 px-8 py-3 rounded-xl font-medium hover:bg-[#1e3987]/10 dark:hover:bg-blue-300/10 transition-colors">
                       PORTOFOLIO KAMI
                     </button>
                   </Link>
@@ -84,7 +107,7 @@ const HeroSection = () => {
               >
                 <div className="relative w-full max-w-[320px] xs:max-w-[360px] h-[180px] xs:h-[220px] sm:max-w-[400px] sm:h-[240px] md:max-w-[512px] md:h-[380px] lg:max-w-[624px] lg:h-[390px]">
                   <Image
-                    src={content.image}
+                    src={isDarkMode ? content.imageDark : content.image}
                     alt={content.alt}
                     fill
                     className="object-contain"
