@@ -62,7 +62,7 @@ const FAQSection = () => {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1e3987] dark:text-blue-300 mb-4 drop-shadow">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0454BE] dark:text-blue-300 mb-4 drop-shadow">
             Frequently Asked Questions
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -90,7 +90,7 @@ const FAQSection = () => {
             Masih punya pertanyaan? Jangan ragu untuk menghubungi kami
           </p>
           <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
-            <button className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1e3987] to-[#3561e7] text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+            <button className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#0454BE] to-[#3561e7] text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
               Hubungi Kami
             </button>
           </Link>

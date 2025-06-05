@@ -16,7 +16,7 @@ export default function DarkModeTransitionOverlay() {
   if (!isTransitioning) return null;
   return (
     <div className="fixed inset-0 z-0 pointer-events-none">
-      <div className="w-full h-full animate-darkmode-transition bg-gradient-to-tr from-[#1e3987] via-[#3561e7] to-[#6fa8ff] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 opacity-80"></div>
+      <div className="w-full h-full animate-darkmode-transition bg-gradient-to-tr from-[#0454BE] via-[#3561e7] to-[#6fa8ff] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 opacity-80"></div>
     </div>
   );
 }

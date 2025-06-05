@@ -67,10 +67,10 @@ const ServicesSection = () => {
     >
       <div className="container max-w-6xl mx-auto px-4">
         <div className="w-full flex justify-center mb-6">
-          <div className="w-16 h-1 bg-[#1e3987] dark:bg-blue-300 rounded-xl"></div>
+          <div className="w-16 h-1 bg-[#0454BE] dark:bg-blue-300 rounded-xl"></div>
         </div>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1e3987] dark:text-blue-300 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0454BE] dark:text-blue-300 mb-4">
             Layanan Kami
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-200 max-w-5xl mx-auto">
@@ -89,7 +89,7 @@ const ServicesSection = () => {
             return (
               <motion.div
                 key={service.id}
-                className="group bg-white dark:bg-gray-800 flex flex-col justify-between w-full h-full p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 transition-colors duration-300 hover:bg-blue-500 dark:hover:bg-[#1e3987]"
+                className="group bg-white dark:bg-gray-800 flex flex-col justify-between w-full h-full p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 transition-colors duration-300 hover:bg-blue-500 dark:hover:bg-[#0454BE]"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -114,7 +114,7 @@ const ServicesSection = () => {
                 <div className="flex justify-end">
                   <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     <button
-                      className="text-white px-2 py-2 rounded-lg text-sm font-medium bg-blue-500 dark:bg-[#1e3987] group-hover:bg-white group-hover:text-blue-500 dark:group-hover:bg-white dark:group-hover:text-[#1e3987] transition-colors"
+                      className="text-white px-2 py-2 rounded-lg text-sm font-medium bg-blue-500 dark:bg-[#0454BE] group-hover:bg-white group-hover:text-blue-500 dark:group-hover:bg-white dark:group-hover:text-[#0454BE] transition-colors"
                     >
                       Hubungi Lebih Lanjut
                     </button>

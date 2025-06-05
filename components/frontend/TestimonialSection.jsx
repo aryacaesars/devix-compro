@@ -51,7 +51,7 @@ const TestimonialSection = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1e3987] dark:text-blue-300 mb-4 drop-shadow">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0454BE] dark:text-blue-300 mb-4 drop-shadow">
             Testimoni Klien Kami
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-5xl mx-auto">
@@ -78,19 +78,19 @@ const TestimonialSection = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-full h-full object-cover rounded-full border-2 border-[#1e3987] dark:border-blue-700 shadow-sm transition-all duration-500"
+                    className="w-full h-full object-cover rounded-full border-2 border-[#0454BE] dark:border-blue-700 shadow-sm transition-all duration-500"
                   />
                 </div>
                 {/* Nama & Jabatan */}
                 <div>
-                  <h3 className="text-lg font-bold text-[#1e3987] dark:text-blue-500">{testimonial.name}</h3>
+                  <h3 className="text-lg font-bold text-[#0454BE] dark:text-blue-500">{testimonial.name}</h3>
                   <p className="text-sm text-gray-700 dark:text-gray-300">{testimonial.position}</p>
                 </div>
               </div>
 
               {/* Testimonial Message */}
               <div className="relative flex justify-center">
-                <p className="text-gray-600 dark:text-gray-300 text-base italic group-hover:text-[#1e3987] dark:group-hover:text-gray-100 transition-colors duration-500 text-center">
+                <p className="text-gray-600 dark:text-gray-300 text-base italic group-hover:text-[#0454BE] dark:group-hover:text-gray-100 transition-colors duration-500 text-center">
                   {testimonial.message}
                 </p>
               </div>

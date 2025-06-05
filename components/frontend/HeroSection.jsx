@@ -67,7 +67,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="w-full md:w-3/5 space-y-6"
               >
-                <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1e3987] dark:text-blue-300">
+                <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0454BE] dark:text-blue-300">
                   {content.title}
                 </h1>
                 <p className="text-lg xs:text-xl md:text-2xl text-gray-700 dark:text-gray-200 max-w-2xl">
@@ -83,7 +83,7 @@ const HeroSection = () => {
                     href="#package"
                     onClick={(e) => handleSmoothScroll(e, "package")}
                   >
-                    <button className="w-full sm:w-auto bg-[#1e3987] text-white dark:bg-white dark:text-blue-500 px-8 py-3 rounded-xl font-medium hover:bg-opacity-85 dark:hover:bg-blue-500 dark:hover:text-white transition-colors">
+                    <button className="w-full sm:w-auto bg-[#0454BE] text-white dark:bg-white dark:text-blue-500 px-8 py-3 rounded-xl font-medium hover:bg-opacity-85 dark:hover:bg-blue-500 dark:hover:text-white transition-colors">
                       Lihat Paket
                     </button>
                   </Link>
@@ -91,7 +91,7 @@ const HeroSection = () => {
                     href="#projects"
                     onClick={(e) => handleSmoothScroll(e, "projects")}
                   >
-                    <button className="w-full sm:w-auto border-2 border-[#1e3987] text-[#1e3987] dark:border-blue-300 dark:text-blue-300 px-8 py-3 rounded-xl font-medium hover:bg-[#1e3987]/10 dark:hover:bg-blue-300/10 transition-colors">
+                    <button className="w-full sm:w-auto border-2 border-[#0454BE] text-[#0454BE] dark:border-blue-300 dark:text-blue-300 px-8 py-3 rounded-xl font-medium hover:bg-[#0454BE]/10 dark:hover:bg-blue-300/10 transition-colors">
                       PORTOFOLIO KAMI
                     </button>
                   </Link>
@@ -103,9 +103,9 @@ const HeroSection = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="w-full md:w-2/5 mt-12 md:mt-0 relative flex justify-center"
+                className="w-full md:w-2/5 mt-2 md:mt-0 relative flex justify-center"
               >
-                <div className="relative w-full max-w-[320px] xs:max-w-[360px] h-[180px] xs:h-[220px] sm:max-w-[400px] sm:h-[240px] md:max-w-[512px] md:h-[380px] lg:max-w-[624px] lg:h-[390px]">
+                <div className="relative w-full max-w-[500px] xs:max-w-[700px] h-[500px] xs:h-[360px] sm:max-w-[640px] sm:h-[400px] md:max-w-[640px] md:h-[480px] lg:max-w-[720px] lg:h-[520px]">
                   <Image
                     src={isDarkMode ? content.imageDark : content.image}
                     alt={content.alt}

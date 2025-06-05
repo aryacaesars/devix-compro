@@ -157,12 +157,19 @@ const ContactSection = () => {
                 <Image
                   src="/frontend/contact/contact.png"
                   alt="Contact"
-                  width={400}
-                  height={400}
-                  className="shadow-md rounded-2xl hover:scale-105 transition-transform duration-1000 ease-in-out"
+                  width={900}
+                  height={900}
+                  className="hover:scale-105 transition-transform duration-1000 ease-in-out block dark:hidden"
                   priority
                 />
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-32 h-4 bg-white/30 rounded-full blur-md" />
+                <Image
+                  src="/frontend/contact/contact-dark.png"
+                  alt="Contact"
+                  width={900}
+                  height={900}
+                  className="hover:scale-105 transition-transform duration-1000 ease-in-out hidden dark:block"
+                  priority
+                />
               </div>
             </motion.div>
           </div>

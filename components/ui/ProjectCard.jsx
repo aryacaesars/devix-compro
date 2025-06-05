@@ -59,7 +59,7 @@ export function ProjectCard({ title, description, images = [], link }) {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-[#1e3987] dark:text-blue-300 font-medium hover:underline"
+          className="inline-flex items-center text-[#0454BE] dark:text-blue-300 font-medium hover:underline"
         >
           Lihat Project <ExternalLink size={16} className="ml-1" />
         </Link>

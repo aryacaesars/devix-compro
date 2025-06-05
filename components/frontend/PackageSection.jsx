@@ -26,7 +26,7 @@ const PackageSection = () => {
     <section id="package" className="py-12 text-center bg-white dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1e3987] dark:text-blue-300 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0454BE] dark:text-blue-300 mb-4">
             Pilihan Paket
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-200 max-w-5xl mx-auto">

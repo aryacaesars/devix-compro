@@ -50,7 +50,7 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-gradient-to-b from-[#1e3987] to-[#3561e7] md:bg-gradient-to-r md:from-[#1e3987] md:to-[#3561e7] text-white dark:bg-gradient-to-b dark:from-gray-950 dark:to-gray-900 md:dark:bg-gradient-to-r md:dark:from-gray-950 md:dark:to-gray-900 py-12 transition-colors duration-300">
+    <footer className="bg-gradient-to-b from-[#0454BE] to-[#3561e7] md:bg-gradient-to-r md:from-[#0454BE] md:to-[#3561e7] text-white dark:bg-gradient-to-b dark:from-gray-950 dark:to-gray-900 md:dark:bg-gradient-to-r md:dark:from-gray-950 md:dark:to-gray-900 py-12 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           {/* Column 1 */}

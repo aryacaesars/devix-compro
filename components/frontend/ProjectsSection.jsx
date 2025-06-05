@@ -77,7 +77,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#1e3987] dark:text-blue-300 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#0454BE] dark:text-blue-300 mb-4">
             Portofolio Kami
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-200 max-w-5xl mx-auto">
