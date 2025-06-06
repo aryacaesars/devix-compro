@@ -123,7 +123,7 @@ const Footer = () => {
                 <FaGithub className="w-6 h-6" />
               </Link>
               <Link
-                href="https://www.instagram.com/devixtech.id/"
+                href="https://www.instagram.com/devixsolution/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"

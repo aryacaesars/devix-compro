@@ -3,13 +3,34 @@
 import Image from "next/image";
 import { ThumbsUp, Eye, Target } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const AboutSection = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check initial dark mode state
+    const checkDarkMode = () => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    };
+
+    checkDarkMode();
+
+    // Listen for dark mode changes
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const aboutContent = {
-    title: "Devix",
     description:
       "Devix adalah komunitas pengembang teknologi yang menyatukan berbagai keahlian, latar belakang, dan minat untuk menciptakan solusi yang inovatif. Nama Devix berasal dari singkatan Developer Mix, yang mencerminkan keberagaman anggotanya dan semangat kolaborasi untuk menghadirkan dampak positif di dunia teknologi.",
-    image: "/frontend/logo/Logo-Tentang.png",
+    imagePrimary: "/frontend/logo/Logo-Primary.svg",
+    imageSecondary: "/frontend/logo/Logo-Secondary.svg",
     alt: "Logo Devix",
   };
 
@@ -40,16 +61,16 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center px-4 py-12 text-center bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section className="flex flex-col items-center justify-center px-4 text-center bg-white dark:bg-gray-900 transition-colors duration-300">
       <motion.div
-        className="w-60 h-60 md:w-80 md:h-80 relative mb-0 md:mb-4"
+        className="w-60 h-60 md:w-80 md:h-80 relative mb-0 md:mb-2"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
         <Image
-          src={aboutContent.image}
+          src={isDarkMode ? aboutContent.imageSecondary : aboutContent.imagePrimary}
           alt={aboutContent.alt}
           layout="fill"
           objectFit="contain"
@@ -58,18 +79,15 @@ const AboutSection = () => {
         />
       </motion.div>
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div className="py-12 flex flex-col items-center w-full">
+        <div className=" flex flex-col items-center w-full">
           {/* Tentang */}
           <motion.div
-            className="w-full md:w-4/5 lg:w-3/4 space-y-6"
+            className="w-full md:w-4/5 lg:w-3/4 mb-6"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl text-[#1e3987] dark:text-white font-bold leading-tight">
-              {aboutContent.title}
-            </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-white max-w-6xl mx-auto">
               {aboutContent.description}
             </p>

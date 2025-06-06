@@ -24,7 +24,7 @@ const ProjectsSection = () => {
         "/frontend/project/npi1.png",
         "/frontend/project/npi2.png",
       ],
-      link: "https://niskala-beryl.vercel.app/",
+      link: "https://www.publinesia.com/",
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       images: [
         "/frontend/project/undagi.png",
       ],
-      link: "#",
+      link: "https://www.undagicorp.com/id",
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
         "/frontend/project/Saas1.png",
         "/frontend/project/Saas2.png",
       ],
-      link: "#",
+      link: "https://tokosembako-eta.vercel.app/",
     },
     {
       id: 5,

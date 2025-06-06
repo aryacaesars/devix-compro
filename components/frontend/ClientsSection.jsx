@@ -15,13 +15,13 @@ const clients = [
     id: 2,
     src: "/frontend/clients/npi.svg",
     alt: "Logo NPI",
-    link: "https://niskala-beryl.vercel.app/",
+    link: "https://www.publinesia.com/",
   },
   {
     id: 3,
     src: "/frontend/clients/undagi.svg",
     alt: "Logo Undagi",
-    link: "#",
+    link: "https://www.undagicorp.com/id",
   },
 ];
 
