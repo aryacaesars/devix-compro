@@ -185,12 +185,32 @@ const Navbar = () => {
                       FAQs
                     </Link>
                   </li>
+                  
+                  {/* Separator and Dark Mode Toggle for Mobile */}
+                  <li className="lg:hidden">
+                    <hr className="border-gray-200 dark:border-gray-700 mx-4 my-3" />
+                    <div className="flex items-center justify-between px-8 py-2">
+                      <span className="text-base text-dark dark:text-white">Theme</span>
+                      <button
+                        onClick={() => setIsDark((v) => !v)}
+                        className="p-2 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-colors duration-300"
+                        aria-label="Toggle dark mode"
+                      >
+                        {isDark ? (
+                          <Sun className="w-5 h-5 text-yellow-400" />
+                        ) : (
+                          <Moon className="w-5 h-5 text-gray-700" />
+                        )}
+                      </button>
+                    </div>
+                  </li>
                 </ul>
               </nav>
-              {/* Dark Mode Toggle */}
+              
+              {/* Dark Mode Toggle for Desktop */}
               <button
                 onClick={() => setIsDark((v) => !v)}
-                className="p-2 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-colors duration-300"
+                className="hidden lg:block p-2 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-colors duration-300"
                 aria-label="Toggle dark mode"
               >
                 {isDark ? (
