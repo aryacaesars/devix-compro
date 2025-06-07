@@ -6,6 +6,7 @@ import ClientsSection from "../../components/frontend/ClientsSection";
 import TestimonialSection from "../../components/frontend/TestimonialSection";
 import ContactSection from "../../components/frontend/ContactSection";
 import FAQSection from "../../components/frontend/FAQSection";
+import PromoPopupProvider from "../../components/ui/PromoPopupProvider";
 
 export default function Home() {
     return (
@@ -18,6 +19,10 @@ export default function Home() {
         <TestimonialSection />
         <ContactSection />
         <FAQSection />
+        
+        {/* Promo Popup - Hanya muncul untuk first time visitor */}
+        <PromoPopupProvider
+        />
       </div>
     );
   }  
